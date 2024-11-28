@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/tip.js"></script>
+    <script src="assets/js/tip.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,54 +20,59 @@
   <body>
     <div class="header">
       <img src="assets/images/SPLITTER.svg" alt="SPLITTER" />
-      <div class="container">
-        <div class="container-top">
-          <h3>Bill</h3>
-          <button class="dolorbtn">
-            <h4>$</h4>
-            <p>142.55</p>
-          </button>
-        </div>
-        <div class="select-tip">
-          <h3>Select Tip %</h3>
-          <div class="select-tip-grid">
-            <button>%5</button>
-            <button>%10</button>
-            <button>%15</button>
-            <button>%25</button>
-            <button>%50</button>
-            <button>Custom</button>
-          </div>
-        </div>
-        <div class="container-top">
-          <h3>Number of People</h3>
-          <button class="dolorbtn">
-            <i class="fa-solid fa-user"></i>
-            <p>5</p>
-          </button>
-        </div>
-        <div class="footer">
-          <div class="tip-amount-top">
-            <div class="tip-amount">
-              <h2>Tip Amount</h2>
-              <p>/ person</p>
-            </div>
-            <div class="pricing">
-              <p>$4.27</p>
-            </div>
-          </div>
-          <div class="tip-amount-bottom">
-            <div class="tip-amount">
-              <h2>Total</h2>
-              <p>/ person</p>
-            </div>
-            <div class="pricing">
-              <p>$32.79</p>
-            </div>
-          </div> 
-            <button class="resetbtn">RESET</button>
-        </div>
-      </div>
+      
     </div>
+    <div class="container">
+      <div class="generally-content">
+       <div class="bill-content">
+        <h3>Bill</h3>
+         <div class="container-top">
+          <img id="billImg" src="assets/images/$.svg" alt="">
+          <input id="dolorInput"  type="text" placeholder="0">
+         
+         </div>
+         <div class="select-tip">
+           <h3>Select Tip %</h3>
+           <div class="select-tip-grid">
+             <button class="tipBtn">%5</button>
+             <button class="tipBtn">%10</button>
+             <button class="tipBtn">%15</button>
+             <button class="tipBtn">%25</button>
+             <button class="tipBtn">%50</button>
+             <input id="custom" type="text" placeholder="Custom">
+           </div>
+         </div>
+         <div class="number-people">
+          <h3>Number of People</h3>
+         <p class="error">Can't be zero</p>
+         </div>
+         <div class="people-input">
+          <i class="fa-solid fa-user"></i>
+          <input id="peopleInput" type="text" placeholder="0">
+         </div>
+       </div>
+         <div class="footer">
+           <div class="tip-amount-top">
+             <div class="tip-amount">
+               <h2>Tip Amount</h2>
+               <p>/ person</p>
+             </div>
+             <div class="pricing">
+               <p id="tipAmount">$0.00</p>
+             </div>
+           </div>
+           <div class="tip-amount-bottom">
+             <div class="tip-amount">
+               <h2>Total</h2>
+               <p>/ person</p>
+             </div>
+             <div class="pricing">
+               <p id="totalAmount">$0.00</p>
+             </div>
+           </div> 
+             <button class="resetbtn">RESET</button>
+         </div>
+      </div>
+       </div>
   </body>
 </html>
